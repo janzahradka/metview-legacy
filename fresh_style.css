@@ -74,6 +74,24 @@ body {
   position: relative;
 }
 
+/* ---- Odkaz na následnickou aplikaci (úplně nahoře) ---- */
+.successor-banner {
+  width: 100%;
+  flex: 0 0 100%;
+  padding: 10px 16px;
+  text-align: center;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--info-grad-start), var(--info-grad-end));
+  border-bottom: 1px solid var(--border);
+}
+.successor-banner a {
+  color: var(--link);
+  text-decoration: underline;
+}
+.successor-banner a:hover {
+  color: var(--link-hover);
+}
+
 /* ---- Top image + slider area ---- */
 .slider-container {
   display: flex;
@@ -381,19 +399,25 @@ header + .group-info-text{
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   body {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
   }
+  .successor-banner {
+    margin: -20px -20px 20px;
+    width: calc(100% + 40px);
+    flex-basis: calc(100% + 40px);
+  }
   .slider-container {
-    max-width: 50%;
+    max-width: calc(50% - 20px);
     margin-right: 20px;
     align-self: flex-start;
   }
   .right-container {
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    max-width: calc(50% - 20px);
     margin-left: 20px;
   }
   header,
