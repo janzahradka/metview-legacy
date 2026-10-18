@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const productGrid = document.getElementById('product-grid');
     const loader = document.getElementById('loader');
     const progressBar = document.getElementById('loader-bar-progress');
-    let currentGroup = 'icon-d2-thermal';
-    let currentProductType = 'oblc';
+    let currentGroup = 'WetterzentraleEurope';
+    let currentProductType = '_2';
     let currentImageIndex = 1; // Store the current slider position
     let imagesLoaded = 0;
     let loaderTimeout; // To store the timeout ID
